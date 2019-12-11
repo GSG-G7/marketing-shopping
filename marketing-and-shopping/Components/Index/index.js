@@ -1,14 +1,35 @@
 import React, { Component } from "react";
-import { View, SafeAreaView } from "react-native";
-import HeaderLanding from "../common/HeaderLandingPage";
+import { SafeAreaView } from "react-native";
+
+import BtnUploadImg from "../common/BtnUploadImg";
 
 export class Index extends Component {
+  arr = [
+    {
+      imgUrl: "https://randomuser.me/api/portraits/men/22.jpg",
+      head: "header card 1"
+    },
+
+    {
+      imgUrl: "https://randomuser.me/api/portraits/men/22.jpg",
+      head: "header card 2"
+    },
+
+    {
+      imgUrl: "https://randomuser.me/api/portraits/men/22.jpg",
+      head: "header card 3"
+    },
+
+    {
+      imgUrl: "https://randomuser.me/api/portraits/men/22.jpg",
+      head: "header card 4"
+    }
+  ];
+
   render() {
     return (
       <SafeAreaView>
-        <View>
-          <HeaderLanding />
-        </View>
+        <BtnUploadImg text="Upload Profile Image" />
       </SafeAreaView>
     );
   }

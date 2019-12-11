@@ -1,0 +1,37 @@
+import React, { Component } from "react";
+import { View, Text, TouchableOpacity } from "react-native";
+
+import HeaderWithoutMenu from "../../common/HeaderWithoutMenu";
+import Input from "../../common/Input";
+import ButtonPrimary from "../../common/ButtonPrimary";
+
+import generalStyle from "../CommonStyle";
+import signIn from "./style";
+
+class SignIn extends Component {
+  state = {};
+  render() {
+    return (
+      <View>
+        <HeaderWithoutMenu head="SignIn" />
+
+        <View style={[generalStyle.container, signIn.parent]}>
+          <Input placeholder="Email" iconName="email" />
+          <Input placeholder="Password" iconName="lock" />
+          <ButtonPrimary text="SignIn" position="center" />
+
+          <View style={[signIn.text]}>
+            <Text style={[generalStyle.firsColor]}>
+              Don’t have an account ?
+            </Text>
+            <TouchableOpacity>
+              <Text style={[generalStyle.firsColor, signIn.link]}>SignUp</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </View>
+    );
+  }
+}
+
+export default SignIn;

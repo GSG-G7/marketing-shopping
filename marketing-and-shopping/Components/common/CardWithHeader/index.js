@@ -5,7 +5,7 @@ import generalStyle from "../CommonStyle";
 import card from "./style";
 
 const CardWithHeader = ({ objInfo }) => (
-  <View style={[generalStyle.container, card.parent]}>
+  <View style={[card.parent]}>
     {objInfo.map((e, i) => (
       <TouchableOpacity style={[card.cardContainer]} key={i}>
         <Image source={{ uri: e.imgUrl }} style={[card.img]} />

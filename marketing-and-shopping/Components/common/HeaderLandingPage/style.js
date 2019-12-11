@@ -9,9 +9,6 @@ const headerLanding = StyleSheet.create({
     shadowColor: "#b2bec3",
     shadowRadius: 10,
     shadowOpacity: 1
-
-    // position: "fixed",
-    // width: "100%"
   },
 
   logo: {

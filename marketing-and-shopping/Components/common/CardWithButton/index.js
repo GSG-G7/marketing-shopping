@@ -5,7 +5,7 @@ import generalStyle from "../CommonStyle";
 import card from "./style";
 
 const CardWithButton = ({ objInfo, type }) => (
-  <View style={[generalStyle.container, card.parent]}>
+  <View style={[card.parent]}>
     {objInfo.map((e, i) => (
       <View style={[card.cardContainer]} key={i}>
         <TouchableOpacity style={[card.imgContainer]}>

@@ -1,35 +1,30 @@
 import React, { Component } from "react";
-import { SafeAreaView } from "react-native";
+import { ScrollView, SafeAreaView, View } from "react-native";
 
-import BtnUploadImg from "../common/BtnUploadImg";
+import Landing from "../pages/Landing";
+import SignUp from "../pages/SignUp";
+import SignIn from "../pages/SignIn";
+import Services from "../pages/Services";
+import ServiceName from "../pages/ServiceName";
+import Product from "../pages/Product";
+import ProductAdded from "../pages/ProductAdded";
+import ProductsProvided from "../pages/ProductsProvided";
+import AddProduct from "../pages/AddProduct";
 
 export class Index extends Component {
-  arr = [
-    {
-      imgUrl: "https://randomuser.me/api/portraits/men/22.jpg",
-      head: "header card 1"
-    },
-
-    {
-      imgUrl: "https://randomuser.me/api/portraits/men/22.jpg",
-      head: "header card 2"
-    },
-
-    {
-      imgUrl: "https://randomuser.me/api/portraits/men/22.jpg",
-      head: "header card 3"
-    },
-
-    {
-      imgUrl: "https://randomuser.me/api/portraits/men/22.jpg",
-      head: "header card 4"
-    }
-  ];
-
   render() {
     return (
       <SafeAreaView>
-        <BtnUploadImg text="Upload Profile Image" />
+        <ScrollView></ScrollView>
+        {/* <Landing /> */}
+        <SignUp />
+        {/* <SignIn /> */}
+        {/* <Services /> */}
+        {/* <ServiceName /> */}
+        {/* <Product /> */}
+        {/* <ProductAdded /> */}
+        {/* <ProductsProvided /> */}
+        {/* <AddProduct /> */}
       </SafeAreaView>
     );
   }

@@ -4,14 +4,27 @@ import { View, Text, TouchableOpacity, Button } from "react-native";
 import generalStyle from "../CommonStyle";
 import button from "./style";
 
-const ButtonPrimary = ({ text, pressFunc }) => (
+const ButtonPrimary = ({ text, pressFunc, position }) => (
   <View>
-    <TouchableOpacity
-      style={[generalStyle.firstBgColor, button.parent]}
-      onPress={pressFunc}
-    >
-      <Text style={[generalStyle.mainColor, button.text]}>{text}</Text>
-    </TouchableOpacity>
+    {position === "center" ? (
+      <View>
+        <TouchableOpacity
+          style={[generalStyle.firstBgColor, button.parent, button.center]}
+          onPress={pressFunc}
+        >
+          <Text style={[generalStyle.mainColor, button.text]}>{text}</Text>
+        </TouchableOpacity>
+      </View>
+    ) : (
+      <View>
+        <TouchableOpacity
+          style={[generalStyle.firstBgColor, button.parent]}
+          onPress={pressFunc}
+        >
+          <Text style={[generalStyle.mainColor, button.text]}>{text}</Text>
+        </TouchableOpacity>
+      </View>
+    )}
   </View>
 );
 

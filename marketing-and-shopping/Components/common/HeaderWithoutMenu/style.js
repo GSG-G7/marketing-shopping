@@ -7,10 +7,8 @@ const headerWithoutMenu = StyleSheet.create({
     alignItems: "center",
     shadowColor: "#b2bec3",
     shadowRadius: 10,
-    shadowOpacity: 1
-
-    // position: "fixed",
-    // width: "100%"
+    shadowOpacity: 1,
+    width: "100%"
   },
 
   icon: {

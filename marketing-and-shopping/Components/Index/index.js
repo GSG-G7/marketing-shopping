@@ -18,11 +18,6 @@ export class Index extends Component {
     {
       imgUrl: "https://randomuser.me/api/portraits/men/22.jpg",
       head: "header card 3"
-    },
-
-    {
-      imgUrl: "https://randomuser.me/api/portraits/men/22.jpg",
-      head: "header card 4"
     }
   ];
 

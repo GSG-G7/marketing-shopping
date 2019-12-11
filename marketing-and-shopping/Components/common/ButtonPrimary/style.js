@@ -5,7 +5,15 @@ const button = StyleSheet.create({
     height: 40,
     width: 200,
     borderRadius: 5,
-    marginTop: 30
+    marginVertical: 30
+  },
+
+  center: {
+    alignSelf: "center"
+  },
+
+  right: {
+    alignSelf: "flex-end"
   },
 
   text: {

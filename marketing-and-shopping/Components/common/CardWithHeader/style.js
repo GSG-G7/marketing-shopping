@@ -16,8 +16,7 @@ const card = StyleSheet.create({
   img: {
     width: "100%",
     height: 150,
-    borderTopLeftRadius: 5,
-    borderTopRightRadius: 5,
+    borderRadius: 5,
     marginBottom: 10
   },
 

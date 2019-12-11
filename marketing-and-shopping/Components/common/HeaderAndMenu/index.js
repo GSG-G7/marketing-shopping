@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, SafeAreaView } from "react-native";
 import Icon from "@expo/vector-icons/build/MaterialIcons";
 
 import Sidebar from "./Sidebar";
@@ -23,26 +23,28 @@ class HeaderAndMenu extends Component {
 
     return (
       <View>
-        <View
-          style={[
-            generalStyle.mainBgColor,
-            generalStyle.container,
-            header.parent
-          ]}
-        >
-          <TouchableOpacity onPress={goBackFunc}>
-            <Icon
-              name="arrow-back"
-              style={[generalStyle.firsColor, header.icon]}
-            />
-          </TouchableOpacity>
+        <SafeAreaView>
+          <View
+            style={[
+              generalStyle.mainBgColor,
+              generalStyle.container,
+              header.parent
+            ]}
+          >
+            <TouchableOpacity onPress={goBackFunc}>
+              <Icon
+                name="arrow-back"
+                style={[generalStyle.firsColor, header.icon]}
+              />
+            </TouchableOpacity>
 
-          <Text style={[generalStyle.firsColor, header.text]}>{head}</Text>
+            <Text style={[generalStyle.firsColor, header.text]}>{head}</Text>
 
-          <TouchableOpacity onPress={this.openMenu}>
-            <Icon name="menu" style={[generalStyle.firsColor, header.icon]} />
-          </TouchableOpacity>
-        </View>
+            <TouchableOpacity onPress={this.openMenu}>
+              <Icon name="menu" style={[generalStyle.firsColor, header.icon]} />
+            </TouchableOpacity>
+          </View>
+        </SafeAreaView>
 
         {opend && <Sidebar closedMenu={this.closedMenu} />}
       </View>

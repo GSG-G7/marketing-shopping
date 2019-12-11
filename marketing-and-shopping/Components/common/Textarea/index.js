@@ -7,8 +7,16 @@ import textarea from "./style";
 
 const Textarea = ({ placeholder, iconName }) => (
   <View style={[textarea.parent]}>
-    <Icon name={iconName} style={[textarea.icon, general.mainColor]} />
-    <TextInput placeholder={placeholder} style={[textarea.field]} />
+    <Icon
+      name={iconName}
+      style={[general.firsColor, general.secondBgColor, textarea.icon]}
+    />
+    <TextInput
+      placeholder={placeholder}
+      style={[general.secondBgColor, textarea.field]}
+      multiline={true}
+      numberOfLines={10}
+    />
   </View>
 );
 

@@ -13,7 +13,8 @@ const input = StyleSheet.create({
     borderRightWidth: 0,
     borderTopLeftRadius: 5,
     borderBottomLeftRadius: 5,
-    lineHeight: 40
+    lineHeight: 40,
+    paddingHorizontal: 5
   },
 
   field: {
@@ -22,8 +23,7 @@ const input = StyleSheet.create({
     borderTopEndRadius: 5,
     borderBottomRightRadius: 5,
     paddingHorizontal: 5,
-    borderLeftWidth: 0,
-    marginLeft: -1
+    borderLeftWidth: 0
   }
 });
 

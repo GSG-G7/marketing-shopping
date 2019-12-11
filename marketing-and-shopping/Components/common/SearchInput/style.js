@@ -4,7 +4,7 @@ const search = StyleSheet.create({
   parent: {
     height: 40,
     position: "relative",
-    marginTop: 30
+    marginVertical: 30
   },
 
   field: {

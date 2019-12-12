@@ -13,7 +13,12 @@ class ProductAdded extends Component {
   render() {
     return (
       <View>
-        <HeaderAndMenu head="Products Added" />
+        <HeaderAndMenu
+          head="Products Added"
+          goback={() => {
+            props.navigation.goBack();
+          }}
+        />
         <View style={[genetalStyle.container, provided.parent]}>
           <SearchInput />
           <CardWithButton objInfo={objInfo} />

@@ -6,11 +6,11 @@ import Icon from "@expo/vector-icons/build/MaterialIcons";
 import generalStyle from "../CommonStyle";
 import header from "./style";
 
-const HeaderWithoutMenu = ({ head }) => (
+const HeaderWithoutMenu = ({ head, goback }) => (
   <View
     style={[generalStyle.mainBgColor, generalStyle.container, header.parent]}
   >
-    <TouchableOpacity>
+    <TouchableOpacity onPress={goback}>
       <Icon name="arrow-back" style={[generalStyle.firsColor, header.icon]} />
     </TouchableOpacity>
 

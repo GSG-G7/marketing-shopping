@@ -16,8 +16,8 @@ export class Index extends Component {
     return (
       <SafeAreaView>
         <ScrollView></ScrollView>
-        {/* <Landing /> */}
-        <SignUp />
+        <Landing />
+        {/* <SignUp /> */}
         {/* <SignIn /> */}
         {/* <Services /> */}
         {/* <ServiceName /> */}

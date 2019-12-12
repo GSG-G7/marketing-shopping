@@ -5,10 +5,7 @@ const headerLanding = StyleSheet.create({
     height: 60,
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "center",
-    shadowColor: "#b2bec3",
-    shadowRadius: 10,
-    shadowOpacity: 1
+    alignItems: "center"
   },
 
   logo: {

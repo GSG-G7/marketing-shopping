@@ -9,9 +9,14 @@ import SimilarProducts from "./similarProducts";
 import generalStyle from "../CommonStyle";
 import product from "./style";
 
-const Product = () => (
+const Product = props => (
   <View>
-    <HeaderAndMenu head="Product Name" />
+    <HeaderAndMenu
+      head="Product Name"
+      goback={() => {
+        props.navigation.goBack();
+      }}
+    />
 
     <View style={[product.content]}>
       <Image

@@ -1,7 +1,13 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import Index from "./Components/Index";
+
+import AppContainer from "./Components/Index/navigate";
+import ProductAdded from "./Components/pages/ProductAdded";
+import ProductsProvided from "./Components/pages/ProductsProvided";
 
 export default function App() {
-  return <Index />;
+  return (
+    <AppContainer />
+    // <ProductAdded />
+    // <ProductsProvided />
+  );
 }

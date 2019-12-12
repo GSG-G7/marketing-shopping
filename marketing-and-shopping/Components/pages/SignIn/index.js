@@ -11,20 +11,39 @@ import signIn from "./style";
 class SignIn extends Component {
   state = {};
   render() {
+    const {
+      navigation: { navigate }
+    } = this.props;
+
     return (
       <View>
-        <HeaderWithoutMenu head="SignIn" />
+        <HeaderWithoutMenu
+          head="SignIn"
+          goback={() => {
+            props.navigation.goBack();
+          }}
+        />
 
         <View style={[generalStyle.container, signIn.parent]}>
           <Input placeholder="Email" iconName="email" />
           <Input placeholder="Password" iconName="lock" />
-          <ButtonPrimary text="SignIn" position="center" />
+          <ButtonPrimary
+            text="SignIn"
+            position="center"
+            pressFunc={() => {
+              navigate("Services");
+            }}
+          />
 
           <View style={[signIn.text]}>
             <Text style={[generalStyle.firsColor]}>
               Don’t have an account ?
             </Text>
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => {
+                navigate("SignUp");
+              }}
+            >
               <Text style={[generalStyle.firsColor, signIn.link]}>SignUp</Text>
             </TouchableOpacity>
           </View>

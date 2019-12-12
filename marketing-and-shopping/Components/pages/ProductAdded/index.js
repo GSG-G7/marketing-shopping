@@ -11,11 +11,22 @@ import added from "./style";
 
 class ProductAdded extends Component {
   render() {
+    console.log(this.props);
     return (
       <View>
-        <HeaderAndMenu head="Products Added" />
+        <HeaderAndMenu
+          head="Products Added"
+          goback={() => {
+            this.props.navigation.goBack();
+          }}
+        />
         <View style={[genetalStyle.container, added.parent]}>
-          <ButtonPrimary text="Add Product" />
+          <ButtonPrimary
+            text="Add Product"
+            pressFunc={() => {
+              this.props.navigation.navigate("AddProduct");
+            }}
+          />
           <CardWithButton objInfo={objInfo} type="delete" />
         </View>
       </View>

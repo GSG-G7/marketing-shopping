@@ -5,7 +5,7 @@ import Icon from "@expo/vector-icons/build/MaterialIcons";
 import generalStyle from "../CommonStyle";
 import input from "./style";
 
-const Input = ({ placeholder, iconName }) => (
+const Input = ({ placeholder, iconName, onChange }) => (
   <View style={[input.parent]}>
     <Icon
       name={iconName}
@@ -14,6 +14,7 @@ const Input = ({ placeholder, iconName }) => (
     <TextInput
       placeholder={placeholder}
       style={[generalStyle.secondBgColor, input.field]}
+      onChange={onChange}
     />
   </View>
 );
